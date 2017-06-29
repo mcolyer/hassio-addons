@@ -1,0 +1,24 @@
+{
+  "name": "Hacklet",
+  "version": "3",
+  "slug": "hacklet",
+  "description": "Control modlets with home assistant",
+  "startup": "before",
+  "boot": "auto",
+  "devices": ["/dev/bus/usb:/dev/bus/usb:rwm"],
+  "options": {
+    "server": "172.17.0.1",
+    "port": 1883,
+    "user": "admin",
+    "password": "",
+    "topic": "hacklet"
+  },
+  "schema": {
+    "server": "str",
+    "port": "int",
+    "user": "str",
+    "password": "str",
+    "topic": "str"
+  }
+
+}
