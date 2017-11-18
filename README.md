@@ -4,6 +4,10 @@ This git repository is a collection of addons for my local install of
 Home Assistant that runs on
 [hass.io](https://home-assistant.io/hassio/).
 
+## Install
+ - [Instructions how to add this repository to
+   Hass.io](https://home-assistant.io/hassio/installing_third_party_addons/)
+
 ## Hacklet
 
 Allows [hacklet](https://github.com/mcolyer/hacklet) to be used to
