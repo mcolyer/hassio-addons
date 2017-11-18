@@ -28,13 +28,11 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     make install && \
     chmod +s /usr/local/bin/rtl_* && \
     cd /tmp/src/ && \
-    git clone https://github.com/james-fry/rtl_433 && \
-    cd rtl_433/ && \
-    mkdir build && \
-    cd build && \
-    cmake ../ && \
-    make && \
-    make install && \
+    git clone https://github.com/mcolyer/Honeywell5800 && \
+    cd Honeywell5800/ && \
+    cd src && \
+    ./build.sh && \
+    cp honeywell /usr/local/bin && \
     apk del build-deps && \
     rm -r /tmp/src && \
     apk add --no-cache libusb mosquitto-clients jq
