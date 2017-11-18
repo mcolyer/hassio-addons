@@ -1,9 +1,9 @@
 {
-  "name": "RTL_433 to MQTT Bridge",
+  "name": "Honeywell Sensors",
   "version": "0.1",
-  "slug": "rtl4332mqtt",
-  "description": "433MHz RF to MQTT Bridge based on RTL_SDR/RTL_433 for RTL2832U based DVB-T USB tuners",
-  "url": "https://github.com/james-fry/hassio-addons/tree/master/rtl4332mqtt",
+  "slug": "honeywell-sensors",
+  "description": "345MHz RF to MQTT Bridge based on RTL_SDR for RTL2832U based DVB-T USB tuners",
+  "url": "https://github.com/mcolyer/hassio-addons/tree/master/honeywell-sensors",
   "startup": "before",
   "boot": "auto",
   "map": ["config:rw", "ssl"],
@@ -14,8 +14,7 @@
     "mqtt_host": "hassio.local",
     "mqtt_user": "",
     "mqtt_password": "",
-    "mqtt_topic": "homeassistant/sensor/currentcost",
-    "protocol": 44
+    "mqtt_topic": "homeassistant/sensor/honeywell",
   },
   "schema":
   {
@@ -23,6 +22,5 @@
     "mqtt_user": "str",
     "mqtt_password": "str",
     "mqtt_topic": "str",
-    "protocol": "int"
    }
 }
