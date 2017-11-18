@@ -14,13 +14,13 @@
     "mqtt_host": "hassio.local",
     "mqtt_user": "",
     "mqtt_password": "",
-    "mqtt_topic": "homeassistant/sensor/honeywell",
+    "mqtt_topic": "homeassistant/sensor/honeywell"
   },
   "schema":
   {
     "mqtt_host": "str",
     "mqtt_user": "str",
     "mqtt_password": "str",
-    "mqtt_topic": "str",
+    "mqtt_topic": "str"
    }
 }
