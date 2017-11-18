@@ -35,7 +35,7 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     cp honeywell /usr/local/bin && \
     apk del build-deps && \
     rm -r /tmp/src && \
-    apk add --no-cache libusb mosquitto-clients jq
+    apk add --no-cache libusb mosquitto-clients jq libstdc++ libgcc
 
 #
 # Define an environment variable
