@@ -23,5 +23,6 @@ echo "MQTT Topic =" $MQTT_TOPIC
 do
   # Create file with touch /tmp/honeywell.log if logging is needed
   [ -w /tmp/honeywell.log ] && echo $line >> honeywell.log
-  echo $line | /usr/bin/mosquitto_pub -h $MQTT_HOST -u $MQTT_USER -P $MQTT_PASS -i honeywell-sensors -r -l -t $MQTT_TOPIC
+  serial="$(echo $line | jq --raw-output '.serial')"
+  echo $line | /usr/bin/mosquitto_pub -h $MQTT_HOST -u $MQTT_USER -P $MQTT_PASS -i honeywell-sensors -r -l -t $MQTT_TOPIC+"/"+$serial
 done
