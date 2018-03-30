@@ -8,6 +8,25 @@ Home Assistant that runs on
  - [Instructions how to add this repository to
    Hass.io](https://home-assistant.io/hassio/installing_third_party_addons/)
 
+## Voltlet
+
+Allows [voltlet](https://github.com/mcolyer/voltlet) to be used to
+control switches in Home Assistant through mqtt swiches like so:
+
+```
+switch:
+  - platform: mqtt            
+    name: "A switch"                                      
+    command_topic: "/voltson/UUID-OF-SWITCH"
+    state_topic: "/voltson/UUID-OF-SWITCH/state"
+    availability_topic: "/voltson/UUID-OF-SWITCH/available"
+    retain: true                                                      
+    payload_on: 'true'                                        
+    payload_off: 'false'
+```
+
+You can find the UUID of the switch in the logs after the switch has connected.
+
 ## Hacklet
 
 Allows [hacklet](https://github.com/mcolyer/hacklet) to be used to
