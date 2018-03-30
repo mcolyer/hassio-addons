@@ -1,0 +1,23 @@
+{
+  "name": "Voltlet",
+  "version": "4",
+  "slug": "voltlet",
+  "description": "Control etekcity voltson outlets with home assistant",
+  "image": "mcolyer/hassio-{arch}-voltlet",
+  "startup": "before",
+  "boot": "auto",
+  "ports": {
+    "17273/tcp": 17273
+  },
+  "options": {
+    "mqtt_broker": "172.17.0.1:1883",
+    "mqtt_user": "admin",
+    "mqtt_password": ""
+  },
+  "schema": {
+    "mqtt_broker": "str",
+    "mqtt_user": "str",
+    "mqtt_password": "str"
+  },
+  "image": "mcolyer/hassio-{arch}-voltlet"
+}
