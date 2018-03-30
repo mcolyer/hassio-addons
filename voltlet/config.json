@@ -1,6 +1,6 @@
 {
   "name": "Voltlet",
-  "version": "3",
+  "version": "4",
   "slug": "voltlet",
   "description": "Control etekcity voltson outlets with home assistant",
   "image": "mcolyer/hassio-{arch}-voltlet",
@@ -18,6 +18,6 @@
     "mqtt_broker": "str",
     "mqtt_user": "str",
     "mqtt_password": "str"
-  }
-
+  },
+  "image": "mcolyer/hassio-{arch}-voltlet"
 }
