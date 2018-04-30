@@ -28,7 +28,8 @@ RUN apk add --no-cache --virtual build-dependencies go wget git musl-dev && \
   cd $GOPATH/src/matt.colyer.name/voltlet && \
   go get && go build -o /voltlet main.go && \
   rm -fr /voltlet.tar.gz /go && \
-  apk del build-dependencies
+  apk del build-dependencies && \
+  apk add --no-cache jq
 
 #
 # Define an environment variable
