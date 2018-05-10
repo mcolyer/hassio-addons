@@ -17,6 +17,5 @@
     "mqtt_broker": "str",
     "mqtt_user": "str",
     "mqtt_password": "str"
-  },
-  "image": "mcolyer/hassio-{arch}-voltlet"
+  }
 }
