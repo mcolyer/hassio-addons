@@ -1,6 +1,6 @@
 {
   "name": "Voltlet",
-  "version": "4",
+  "version": "5",
   "slug": "voltlet",
   "description": "Control etekcity voltson outlets with home assistant",
   "startup": "before",
