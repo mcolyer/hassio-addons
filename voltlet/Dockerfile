@@ -2,6 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
+ENV VOLTLET_VERSION v1.0.0
 
 MAINTAINER Matt Colyer
 
@@ -21,10 +22,10 @@ LABEL \
 ENV GOPATH="/go"
 
 RUN apk add --no-cache --virtual build-dependencies go wget git musl-dev && \
-  wget -O /voltlet.tar.gz https://github.com/mcolyer/voltlet/archive/v1.0.0.tar.gz && \
+  wget -O /voltlet.tar.gz https://github.com/mcolyer/voltlet/archive/$VOLTLET_VERSION.tar.gz && \
   tar xf /voltlet.tar.gz && \
   mkdir -p $GOPATH && mkdir -p $GOPATH/src/matt.colyer.name/ && \
-  mv /voltlet-1.0.0 $GOPATH/src/matt.colyer.name/voltlet && \
+  mv /voltlet-$VOLTLET_VERSION $GOPATH/src/matt.colyer.name/voltlet && \
   cd $GOPATH/src/matt.colyer.name/voltlet && \
   go get && go build -o /voltlet main.go && \
   rm -fr /voltlet.tar.gz /go && \

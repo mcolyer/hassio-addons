@@ -5,6 +5,7 @@
   "description": "Control etekcity voltson outlets with home assistant",
   "startup": "before",
   "boot": "auto",
+  "arch": ["amd64", "armhf", "aarch64", "i386"],
   "ports": {
     "17273/tcp": 17273
   },
