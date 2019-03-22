@@ -1,11 +1,11 @@
 {
   "name": "mb8600",
-  "version": "1",
+  "version": "2",
   "slug": "mb8600",
   "description": "Record mb8600 modem statistics in influxdb",
   "startup": "before",
   "boot": "auto",
-  "arch": ["amd64", "armhf", "aarch64", "i386"],
+  "arch": ["amd64"],
   "options": {
     "influxdb": {
       "host": "172.17.0.1",

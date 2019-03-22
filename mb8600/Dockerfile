@@ -19,10 +19,11 @@ LABEL \
   io.hass.arch="armhf|aarch64|i386|amd64"
 
 RUN apk add --no-cache nodejs npm
-RUN npm install -g request jsdom influx moment
 RUN wget -O /modem-statistics.tar.gz https://github.com/mattund/modem-statistics/archive/$MODEM_STATISTICS_VERSION.tar.gz && \
   tar xf /modem-statistics.tar.gz && \
   mv /modem-statistics-$MODEM_STATISTICS_VERSION modem-statistics
+WORKDIR /modem-statistics/models/mb8600
+RUN npm install request jsdom influx moment
 
 #
 # Define an environment variable
