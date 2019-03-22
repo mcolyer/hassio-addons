@@ -7,6 +7,6 @@ CONFIG_PATH=/data/options.json
 
 #set -x  ## uncomment for MQTT logging...
 
-cd modem-statistics/models/mb8600/
+cd /modem-statistics/models/mb8600/
 cp $CONFIG_PATH config.json
 node server.js
