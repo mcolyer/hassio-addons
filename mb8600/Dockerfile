@@ -18,10 +18,13 @@ LABEL \
   io.hass.type="addon" \
   io.hass.arch="armhf|aarch64|i386|amd64"
 
-RUN apk add --no-cache nodejs npm
+RUN apk add --no-cache nodejs npm patch
 RUN wget -O /modem-statistics.tar.gz https://github.com/mattund/modem-statistics/archive/$MODEM_STATISTICS_VERSION.tar.gz && \
   tar xf /modem-statistics.tar.gz && \
   mv /modem-statistics-$MODEM_STATISTICS_VERSION /modem-statistics
+COPY ./fix-login.patch /modem-statistics/
+WORKDIR /modem-statistics
+RUN patch -p1 < fix-login.patch
 WORKDIR /modem-statistics/models/mb8600
 RUN npm install request jsdom influx moment
 
