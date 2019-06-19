@@ -2,7 +2,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
-ENV MODEM_STATISTICS_VERSION a25e36fa22fbe927e8d70878cd9d027062c0d79f
+ENV MB8600_VERSION v1.1.0
+ENV MB8600_VERSION_PATH 1.1.0
 
 MAINTAINER Matt Colyer
 
@@ -18,25 +19,20 @@ LABEL \
   io.hass.type="addon" \
   io.hass.arch="armhf|aarch64|i386|amd64"
 
-RUN apk add --no-cache nodejs npm patch
-RUN wget -O /modem-statistics.tar.gz https://github.com/mattund/modem-statistics/archive/$MODEM_STATISTICS_VERSION.tar.gz && \
-  tar xf /modem-statistics.tar.gz && \
-  mv /modem-statistics-$MODEM_STATISTICS_VERSION /modem-statistics
-COPY ./fix-login.patch /modem-statistics/
-WORKDIR /modem-statistics
-RUN patch -p1 < fix-login.patch
-WORKDIR /modem-statistics/models/mb8600
-RUN npm install request jsdom influx moment
+# Build step
+ENV GOPATH="/go"
+ENV GO111MODULE=on
 
-#
-# Define an environment variable
-#
-# Use this variable when creating a container to specify the MQTT broker host.
-ENV INFLUXDB_HOST="hassio.local"
-ENV INFLUXDB_USER="guest"
-ENV INFLUXDB_PASSWORD="guest"
-ENV MODEM_USER="guest"
-ENV MODEM_PASSWORD="guest"
+RUN apk add --no-cache --virtual build-dependencies go wget git musl-dev && \
+  wget -O /mb8600.tar.gz https://github.com/mcolyer/mb8600/archive/$MB8600_VERSION.tar.gz && \
+  tar xf /mb8600.tar.gz && \
+  mkdir -p $GOPATH && mkdir -p $GOPATH/src/matt.colyer.name/ && \
+  mv /mb8600-$MB8600_VERSION_PATH $GOPATH/src/matt.colyer.name/mb8600 && \
+  cd $GOPATH/src/matt.colyer.name/mb8600 && \
+  go get && go build -o /mb8600 main.go && \
+  rm -fr /mb8600.tar.gz /go && \
+  apk del build-dependencies && \
+  apk add --no-cache jq
 
 COPY ./run.sh /
 RUN chmod +x /run.sh

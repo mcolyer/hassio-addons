@@ -1,6 +1,6 @@
 {
   "name": "mb8600",
-  "version": "4",
+  "version": "5",
   "slug": "mb8600",
   "description": "Record mb8600 modem statistics in influxdb",
   "startup": "before",
@@ -8,24 +8,14 @@
   "arch": ["amd64"],
   "options": {
     "influxdb": {
-      "host": "172.17.0.1",
-      "port": "8086"
-    },
-    "modem": {
-      "host": "192.168.100.1",
-      "user": "admin",
-      "password": ""
+      "address": "http://172.17.0.1:8086",
+      "database": "modem"
     }
   },
   "schema": {
     "influxdb": {
-      "host": "str",
-      "port": "int"
-    },
-    "modem": {
-      "host": "str",
-      "user": "str",
-      "password": "str"
+      "address": "str",
+      "database": "str"
     }
   },
   "image": "mcolyer/hassio-{arch}-mb8600"
