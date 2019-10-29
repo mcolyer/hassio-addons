@@ -9,9 +9,9 @@ bashio::log.info "Starting event listener..."
 while read -r input; do
     bashio::log.info "Fetching"
 
-    ./mywater 2>/dev/null > data
-    curl -i -XPOST '${INFLUXDB_URL}/write?db=${INFLUXDB_DB}' --data-binary @data
-    rm data
+    ./mywater 2>/dev/null > tmp-data
+    curl -i -XPOST '${INFLUXDB_URL}/write?db=${INFLUXDB_DB}' --data-binary @tmp-data
+    rm tmp-data
 
     bashio::log.info "Complete"
 done
