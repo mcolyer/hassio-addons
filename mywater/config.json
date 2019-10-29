@@ -1,6 +1,6 @@
 {
   "name": "mywater",
-  "version": "5",
+  "version": "6",
   "slug": "mywater",
   "description": "Fetch water usage from website",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/mywater",
