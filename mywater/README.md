@@ -13,3 +13,9 @@ For all:
 ```
 docker run --rm --privileged -v PATH_TO/hassio-addons/mywater:/data -ti homeassistant/amd64-builder -t /data --docker-login
 ```
+
+### Triggering within hassio
+
+Call the `hassio.addon_stdin` service with `{"addon":"88f46aa6_mywater",
+"input": {}}`.
+

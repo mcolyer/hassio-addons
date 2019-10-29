@@ -2,8 +2,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
-ENV MYWATER_VERSION v1.0.0
-ENV MYWATER_VERSION_PATH 1.0.0
+ENV MYWATER_VERSION v1.0.1
+ENV MYWATER_VERSION_PATH 1.0.1
 
 MAINTAINER Matt Colyer
 
@@ -31,7 +31,7 @@ RUN apk add --no-cache --virtual build-dependencies go wget git musl-dev && \
   go get && go build -o /mywater main.go && \
   rm -fr /mywater.tar.gz /go && \
   apk del build-dependencies && \
-  apk add --no-cache jq curl
+  apk add --no-cache curl
 
 COPY ./run.sh /
 RUN chmod +x /run.sh
