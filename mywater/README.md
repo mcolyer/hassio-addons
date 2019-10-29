@@ -19,3 +19,19 @@ docker run --rm --privileged -v PATH_TO/hassio-addons/mywater:/data -ti homeassi
 Call the `hassio.addon_stdin` service with `{"addon":"88f46aa6_mywater",
 "input": {}}`.
 
+### Automation configuration
+
+Here's an example automation configuration you could use:
+
+```yaml
+- id: fetch_water_usage
+  alias: Fetch water usage
+  trigger:
+    - platform: time
+      at: '23:00:00'
+  action:
+    - service: hassio.addon_stdin
+      data:
+        addon: 88f46aa6_mywater
+        input: ""
+```
