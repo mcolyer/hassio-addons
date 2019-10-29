@@ -1,7 +1,7 @@
 #!/usr/bin/env bashio
 
-USERNAME=$(bashio::config 'username')
-PASSWORD=$(bashio::config 'password')
+export USERNAME=$(bashio::config 'username')
+export PASSWORD=$(bashio::config 'password')
 INFLUXDB_URL=$(bashio::config 'influxdb_url')
 INFLUXDB_DB=$(bashio::config 'influxdb_db')
 
