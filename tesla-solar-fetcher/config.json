@@ -1,0 +1,27 @@
+{
+  "name": "tesla-solar-fetcher",
+  "version": "1",
+  "slug": "tesla-solar-fetcher",
+  "description": "Fetch solar generation from tesla",
+  "url": "https://github.com/mcolyer/hassio-addons/tree/master/tesla-solar-fetcher",
+  "arch": [
+    "amd64"
+  ],
+  "startup": "system",
+  "stdin": true,
+  "boot": "auto",
+  "options": {
+    "influxdb_url": "http://172.17.0.1:8086",
+    "influxdb_db": "utilities",
+    "email": "",
+    "password": ""
+  },
+  "schema": {
+    "influxdb_url": "str",
+    "influxdb_db": "str",
+    "email": "str",
+    "password": "str"
+  },
+  "image": "mcolyer/hassio-{arch}-tesla-solar-fetcher"
+}
+
