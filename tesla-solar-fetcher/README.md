@@ -16,7 +16,7 @@ docker run --rm --privileged -v PATH_TO/hassio-addons/tesla-solar-fetcher:/data 
 
 ### Triggering within hassio
 
-Call the `hassio.addon_stdin` service with `{"addon":"88f46aa6_tesla-solar-fetcher",
+Call the `hassio.addon_stdin` service with `{"addon":"88f46aa6_tesla_solar_fetcher",
 "input": {}}`.
 
 ### Automation configuration
@@ -40,6 +40,6 @@ Here's an example automation configuration you could use:
    action:
      - service: hassio.addon_stdin
        data:
-         addon: 88f46aa6_tesla-solar-fetcher
+         addon: 88f46aa6_tesla_solar_fetcher
          input: ""
 ```
