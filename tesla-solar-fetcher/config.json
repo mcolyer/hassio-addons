@@ -1,6 +1,6 @@
 {
   "name": "tesla-solar-fetcher",
-  "version": "2",
+  "version": "1",
   "slug": "tesla_solar_fetcher",
   "description": "Fetch solar generation from tesla",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/tesla-solar-fetcher",
