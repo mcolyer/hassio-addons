@@ -1,6 +1,6 @@
 {
   "name": "pge-sharemydata",
-  "version": "1",
+  "version": "2",
   "slug": "pge_sharemydata",
   "description": "Receives and then fetches energy grid usage information from PGE",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/pge-sharemydata",
@@ -8,10 +8,10 @@
     "amd64"
   ],
   "ports": {
-    "3333/tcp": 8080
+    "8080/tcp": 3333
   },
   "ports_description": {
-    "3333/tcp": "Webhook endpoint"
+    "8080/tcp": "Webhook endpoint"
   },
   "startup": "system",
   "stdin": true,
