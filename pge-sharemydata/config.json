@@ -1,6 +1,6 @@
 {
   "name": "pge-sharemydata",
-  "version": "2",
+  "version": "3",
   "slug": "pge_sharemydata",
   "description": "Receives and then fetches energy grid usage information from PGE",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/pge-sharemydata",
@@ -16,8 +16,24 @@
   "startup": "system",
   "stdin": true,
   "boot": "auto",
-  "options": { },
-  "schema": { },
+  "options": {
+    "influxdb_url": "http://172.17.0.1:8086",
+    "influxdb_db": "utilities",
+    "pge_bulk_id": "",
+    "pge_client_id": "",
+    "pge_client_secret": "",
+    "ssl_cert": "",
+    "ssl_key": ""
+  },
+  "schema": {
+    "influxdb_url": "str",
+    "influxdb_db": "str",
+    "pge_bulk_id": "str",
+    "pge_client_id": "str",
+    "pge_client_secret": "str",
+    "ssl_cert": "str",
+    "ssl_key": "str"
+  },
   "image": "mcolyer/hassio-{arch}-pge-sharemydata"
 }
 
