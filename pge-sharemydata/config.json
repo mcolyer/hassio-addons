@@ -1,6 +1,6 @@
 {
   "name": "pge-sharemydata",
-  "version": "3",
+  "version": "4",
   "slug": "pge_sharemydata",
   "description": "Receives and then fetches energy grid usage information from PGE",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/pge-sharemydata",
