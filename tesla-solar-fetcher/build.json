@@ -1,5 +1,5 @@
 {
   "build_from": {
-    "armhf": "alpine:3.7"
+    "armhf": "alpine:3.11"
   }
 }
