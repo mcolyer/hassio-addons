@@ -57,3 +57,17 @@ Then run the following command on the host
 ```bash
 sudo rmmod dvb_usb_rtl28xxu rtl2832
 ```
+
+## Building
+
+For just amd64:
+
+```
+docker run --rm --privileged -v PATH_TO/hassio-addons/honeywell-sensors:/data -ti homeassistant/amd64-builder --amd64 -t /data --docker-login USER --docker-password PASSWORD
+```
+
+For all:
+
+```
+docker run --rm --privileged -v PATH_TO/hassio-addons/honeywell-sensors:/data -ti homeassistant/amd64-builder --all -t /data --docker-login USER --docker-password PASSWORD
+```

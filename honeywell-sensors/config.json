@@ -1,7 +1,9 @@
 {
   "name": "Honeywell Sensors",
-  "version": "0.7",
+  "arch": ["amd64"],
+  "version": "0.8",
   "slug": "honeywell-sensors",
+  "image": "mcolyer/hassio-{arch}-honeywell-sensors",
   "description": "345MHz RF to MQTT Bridge based on RTL_SDR for RTL2832U based DVB-T USB tuners",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/honeywell-sensors",
   "startup": "before",
