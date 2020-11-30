@@ -10,7 +10,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-MAINTAINER James Fry
+MAINTAINER Matt Colyer
 
 LABEL Description="This image is used to start a script that will monitor for RF events on 345Mhz (configurable) and send the data to an MQTT server"
 
@@ -23,10 +23,10 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     git clone git://git.osmocom.org/rtl-sdr.git && \
     mkdir /tmp/src/rtl-sdr/build && \
     cd /tmp/src/rtl-sdr/build && \
-    cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON -DCMAKE_INSTALL_PREFIX:PATH=/usr/local && \
+    cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON -DCMAKE_INSTALL_PREFIX:PATH=/usr && \
     make && \
     make install && \
-    chmod +s /usr/local/bin/rtl_* && \
+    chmod +s /usr/bin/rtl_* && \
     cd /tmp/src/ && \
     git clone https://github.com/mcolyer/Honeywell5800 && \
     cd Honeywell5800/ && \
@@ -35,6 +35,7 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     cp honeywell /usr/local/bin && \
     apk del build-deps && \
     rm -r /tmp/src && \
+    echo "/lib:/usr/local/lib:/usr/lib64:/usr/lib" > /etc/ld-musl-x86_64.path && \
     apk add --no-cache libusb mosquitto-clients jq libstdc++ libgcc
 
 #
