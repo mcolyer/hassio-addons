@@ -1,4 +1,4 @@
-name: 'Honeywell Sensors'
+name: 'Voltlet'
 
 on:
   push:

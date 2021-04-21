@@ -1,4 +1,4 @@
-name: 'Honeywell Sensors'
+name: 'mb8600'
 
 on:
   push:

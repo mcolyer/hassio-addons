@@ -1,4 +1,4 @@
-name: 'Honeywell Sensors'
+name: 'PGE MyShareData'
 
 on:
   push:

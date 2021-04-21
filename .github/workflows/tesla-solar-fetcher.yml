@@ -1,4 +1,4 @@
-name: 'Honeywell Sensors'
+name: 'Tesla Solar Fetcher'
 
 on:
   push:
