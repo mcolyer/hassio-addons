@@ -1,12 +1,12 @@
 {
   "name": "Hacklet",
   "arch": ["amd64"],
-  "version": "3",
+  "version": "4",
   "slug": "hacklet",
   "description": "Control modlets with home assistant",
-  "startup": "before",
+  "startup": "services",
   "boot": "auto",
-  "devices": ["/dev/bus/usb:/dev/bus/usb:rwm"],
+  "usb": "True",
   "options": {
     "server": "172.17.0.1",
     "port": 1883,
