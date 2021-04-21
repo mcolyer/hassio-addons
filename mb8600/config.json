@@ -1,9 +1,8 @@
 {
   "name": "mb8600",
-  "version": "8",
+  "version": "9",
   "slug": "mb8600",
   "description": "Record mb8600 modem statistics in influxdb",
-  "startup": "before",
   "boot": "auto",
   "arch": ["amd64"],
   "options": {
