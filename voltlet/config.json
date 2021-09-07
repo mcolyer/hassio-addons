@@ -19,5 +19,5 @@
     "mqtt_user": "str",
     "mqtt_password": "str"
   },
-  "image": "ghcr.io/mcolyer/hassio-{arch}-voltlet"
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-voltlet"
 }
