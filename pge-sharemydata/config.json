@@ -33,6 +33,6 @@
     "ssl_cert": "str",
     "ssl_key": "str"
   },
-  "image": "mcolyer/hassio-{arch}-pge-sharemydata"
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-pge-sharemydata"
 }
 

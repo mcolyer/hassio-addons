@@ -21,6 +21,6 @@
     "username": "str",
     "password": "str"
   },
-  "image": "mcolyer/hassio-{arch}-mywater"
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-mywater"
 }
 

@@ -21,6 +21,6 @@
     "email": "str",
     "password": "str"
   },
-  "image": "mcolyer/hassio-{arch}-tesla-solar-fetcher"
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-tesla-solar-fetcher"
 }
 

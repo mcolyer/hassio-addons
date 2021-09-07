@@ -23,5 +23,6 @@
     "mqtt_user": "str",
     "mqtt_password": "str",
     "mqtt_topic": "str"
-   }
+   },
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-honeywell-sensors"
 }

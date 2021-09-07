@@ -17,5 +17,5 @@
       "database": "str"
     }
   },
-  "image": "mcolyer/hassio-{arch}-mb8600"
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-mb8600"
 }

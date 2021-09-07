@@ -20,6 +20,6 @@
     "user": "str",
     "password": "str",
     "topic": "str"
-  }
-
+  },
+  "image": "ghcr.io/mcolyer/homeassistant-{arch}-hacklet"
 }

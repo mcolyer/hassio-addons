@@ -16,11 +16,12 @@ jobs:
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Publish
       uses: home-assistant/builder@master
       with:
         args: |
           --amd64 \
           --target mb8600 \
-          --docker-hub mcolyer
+          --image homeassistant-amd64-mb8600 \
+          --docker-hub ghcr.io/mcolyer
