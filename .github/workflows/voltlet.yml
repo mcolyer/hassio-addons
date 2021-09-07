@@ -24,4 +24,5 @@ jobs:
         args: |
           --amd64 \
           --target voltlet \
-          --docker-hub ghcr.io/mcolyer/homeassistant-amd64-voltlet
+          --image homeassistant-amd64-voltlet \
+          --docker-hub ghcr.io/mcolyer
