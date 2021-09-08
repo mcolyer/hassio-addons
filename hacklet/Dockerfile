@@ -1,7 +1,5 @@
-FROM %%BASE_IMAGE%%
-
-#FROM homeassistant/armhf-base:latest
-#LABEL io.hass.version="xy"
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
