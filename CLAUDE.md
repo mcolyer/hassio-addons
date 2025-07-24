@@ -14,7 +14,7 @@ This is a collection of Home Assistant add-ons (hassio-addons) for personal use.
   - `Dockerfile` - Container build instructions
   - `run.sh` - Entry point script
   - `README.md` - Add-on specific documentation
-- `repository.json` - Repository metadata for Home Assistant add-on store
+- `repository.yaml` - Repository metadata for Home Assistant add-on store
 
 ## Add-on Architecture
 
