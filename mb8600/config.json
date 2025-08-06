@@ -4,7 +4,7 @@
   "slug": "mb8600",
   "description": "Record mb8600 modem statistics in influxdb",
   "boot": "auto",
-  "arch": ["amd64"],
+  "arch": ["amd64", "aarch64"],
   "options": {
     "influxdb": {
       "address": "http://172.17.0.1:8086",

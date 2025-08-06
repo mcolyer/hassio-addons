@@ -5,7 +5,8 @@
   "description": "Fetch water usage from website",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/mywater",
   "arch": [
-    "amd64"
+    "amd64",
+    "aarch64"
   ],
   "stdin": true,
   "boot": "auto",

@@ -1,6 +1,6 @@
 {
   "name": "Hacklet",
-  "arch": ["amd64"],
+  "arch": ["amd64", "aarch64"],
   "version": "5",
   "slug": "hacklet",
   "description": "Control modlets with home assistant",

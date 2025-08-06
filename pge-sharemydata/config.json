@@ -5,7 +5,8 @@
   "description": "Receives and then fetches energy grid usage information from PGE",
   "url": "https://github.com/mcolyer/hassio-addons/tree/master/pge-sharemydata",
   "arch": [
-    "amd64"
+    "amd64",
+    "aarch64"
   ],
   "ports": {
     "8080/tcp": 3333

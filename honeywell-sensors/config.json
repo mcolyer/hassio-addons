@@ -1,6 +1,6 @@
 {
   "name": "Honeywell Sensors",
-  "arch": ["amd64"],
+  "arch": ["amd64", "aarch64"],
   "version": "0.13",
   "slug": "honeywell-sensors",
   "description": "345MHz RF to MQTT Bridge based on RTL_SDR for RTL2832U based DVB-T USB tuners",
